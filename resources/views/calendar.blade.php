@@ -1,26 +1,26 @@
-<div
+<div class="container">
     @if($pollMillis !== null && $pollAction !== null)
-        wire:poll.{{ $pollMillis }}ms="{{ $pollAction }}"
+        <div wire:poll.{{ $pollMillis }}ms="{{ $pollAction }}"></div>
     @elseif($pollMillis !== null)
-        wire:poll.{{ $pollMillis }}ms
+        <div wire:poll.{{ $pollMillis }}ms></div>
     @endif
->
+
     <div>
         @includeIf($beforeCalendarView)
     </div>
 
-    <div class="flex">
-        <div class="overflow-x-auto w-full">
-            <div class="inline-block min-w-full overflow-hidden">
+    <div class="d-flex">
+        <div class="overflow-auto w-100">
+            <div class="d-inline-block min-w-100 overflow-hidden">
 
-                <div class="w-full flex flex-row">
+                <div class="w-100 d-flex flex-row">
                     @foreach($monthGrid->first() as $day)
                         @include($dayOfWeekView, ['day' => $day])
                     @endforeach
                 </div>
 
                 @foreach($monthGrid as $week)
-                    <div class="w-full flex flex-row">
+                    <div class="w-100 d-flex flex-row">
                         @foreach($week as $day)
                             @include($dayView, [
                                     'componentId' => $componentId,

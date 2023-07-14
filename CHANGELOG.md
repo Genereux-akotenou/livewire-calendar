@@ -4,7 +4,7 @@
 
 - Added support for PHP 8
 - Added support for Laravel 10
-- Switch CSS class to bootstrap-css
+- Mka it independent for any external style libraries
 
 ## 2.1.0 - 2021-01-25
 

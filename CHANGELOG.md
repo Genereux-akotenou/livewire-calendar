@@ -1,5 +1,11 @@
 # Changelog
 
+## ..... - 2023-07-14
+
+- Added support for PHP 8
+- Added support for Laravel 10
+- Switch CSS class to bootstrap-css
+
 ## 2.1.0 - 2021-01-25
 
 - Added support for PHP 8
